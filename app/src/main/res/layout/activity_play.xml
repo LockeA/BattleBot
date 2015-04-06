@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView_debug"
+        android:text="output"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Force noop"
+        android:id="@+id/button_noop"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:width="40dp"
+        android:onClick="noop"
+        android:visibility="visible" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton_up"
+        android:src="@drawable/up"
+        android:layout_above="@+id/imageButton_left"
+        android:layout_centerHorizontal="true"
+        android:onClick="moveUp"
+        android:visibility="visible" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton_right"
+        android:src="@drawable/right"
+        android:layout_alignTop="@+id/imageButton_left"
+        android:layout_toRightOf="@+id/imageButton_up"
+        android:layout_toEndOf="@+id/imageButton_up"
+        android:onClick="moveRight"
+        android:visibility="visible" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton_left"
+        android:src="@drawable/left"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/imageButton_up"
+        android:layout_toStartOf="@+id/imageButton_up"
+        android:onClick="moveLeft"
+        android:visibility="visible" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton_down"
+        android:layout_below="@+id/imageButton_right"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/down"
+        android:onClick="moveDown"
+        android:visibility="visible" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton_upleft"
+        android:src="@drawable/download"
+        android:layout_alignTop="@+id/imageButton_up"
+        android:layout_alignLeft="@+id/imageButton_left"
+        android:layout_alignStart="@+id/imageButton_left"
+        android:onClick="moveUpLeft"
+        android:visibility="visible" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton_upright"
+        android:src="@drawable/download"
+        android:layout_alignTop="@+id/imageButton_up"
+        android:layout_alignRight="@+id/imageButton_right"
+        android:layout_alignEnd="@+id/imageButton_right"
+        android:onClick="moveUpRight"
+        android:visibility="visible" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton_downleft"
+        android:src="@drawable/download"
+        android:layout_alignBottom="@+id/imageButton_down"
+        android:layout_alignLeft="@+id/imageButton_left"
+        android:layout_alignStart="@+id/imageButton_left"
+        android:onClick="moveDownLeft"
+        android:visibility="visible" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton_downright"
+        android:src="@drawable/download"
+        android:layout_alignBottom="@+id/imageButton_down"
+        android:layout_alignRight="@+id/imageButton_right"
+        android:layout_alignEnd="@+id/imageButton_right"
+        android:onClick="moveDownRight"
+        android:visibility="visible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Force Scan"
+        android:id="@+id/button_scan"
+        android:layout_below="@+id/imageButton_down"
+        android:height="50dp"
+        android:layout_alignLeft="@+id/imageButton_downleft"
+        android:layout_alignStart="@+id/imageButton_downleft"
+        android:layout_toLeftOf="@+id/imageButton_down"
+        android:layout_toStartOf="@+id/imageButton_down"
+        android:onClick="scan"
+        android:visibility="visible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fire at Powerup"
+        android:id="@+id/button_firepowerup"
+        android:layout_alignBottom="@+id/button_scan"
+        android:layout_alignRight="@+id/imageButton_right"
+        android:layout_alignEnd="@+id/imageButton_right"
+        android:layout_alignLeft="@+id/imageButton_downright"
+        android:layout_alignStart="@+id/imageButton_downright"
+        android:onClick="firePowerUp"
+        android:visibility="visible" />
+
+</RelativeLayout>
